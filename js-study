@@ -1,1 +1,19 @@
 
+function btn(hole){
+    document.getElementById('alert').style.display=hole
+}
+
+// document.querySelector(".idtext").addEventListener("click",function(){
+//     document.querySelector(".textbox").textContent="아이디를 입력하세요"
+// })
+
+// document.querySelector(".pstext").addEventListener("click",function(){
+//     document.querySelector(".textbox").textContent="비밀번호를 입력하세요"
+// })
+
+
+function alertbox(hole2){
+    
+    document.querySelector(".textbox").textContent=hole2;
+    document.querySelector(".alert-box").style.display='block';
+}
