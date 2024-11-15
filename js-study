@@ -1,7 +1,9 @@
+// 닫기 적용 //
+document.getElementById("close").addEventListener("click",function(){
+    document.getElementById("alert").style.display="none";
+})
+// 닫기 적용 //
 
-function btn(hole){
-    document.getElementById('alert').style.display=hole
-}
 
 // document.querySelector(".idtext").addEventListener("click",function(){
 //     document.querySelector(".textbox").textContent="아이디를 입력하세요"
