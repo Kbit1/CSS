@@ -1,27 +1,6 @@
-// 닫기 적용 //
-document.getElementById("close").addEventListener("click",function(){
-    document.getElementById("alert").style.display="none";
-})
-// 닫기 적용 //
-
-
-// document.querySelector(".idtext").addEventListener("click",function(){
-//     document.querySelector(".textbox").textContent="아이디를 입력하세요"
-// })
-
-// document.querySelector(".pstext").addEventListener("click",function(){
-//     document.querySelector(".textbox").textContent="비밀번호를 입력하세요"
-// })
-
-
-function alertbox(hole2){
-    
-    document.querySelector(".textbox").textContent=hole2;
-    document.querySelector(".alert-box").style.display='block';
-}
-
-//Naver 만들기 naverbar toggler 버튼
-document.querySelector(".navbar-toggler").addEventListener("click",function(){
-    document.querySelector(".list-group").classList.toggle("show")
-})
-//
+document.querySelector("#submit-btn").addEventListener("click",function(e){
+    if(document.querySelector("#text-control").value===""){
+        alert("값이 입력되지 않았습니다")
+        e.preventDefault();
+    }
+});
