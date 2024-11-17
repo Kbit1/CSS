@@ -1,6 +1,14 @@
 document.querySelector("#submit-btn").addEventListener("click",function(e){
     if(document.querySelector("#text-control").value===""){
-        alert("값이 입력되지 않았습니다")
-        e.preventDefault();
-    }
-});
+        e.preventDefault
+        alert("아이디 값이 입력되지 않음")
+    } 
+})
+
+document.querySelector("#submit-btn").addEventListener("click",function(e){
+    if(document.querySelector("#password-control").value===""){
+        e.preventDefault
+        alert("비밀번호 값이 입력되지 않음")
+    } 
+})
+
