@@ -13,16 +13,29 @@
 // })
 
 
-
 document.querySelector("#submit-btn").addEventListener("click",function(e){
     if(document.querySelector("#text-control").value===""){
+        alert("아이디 값이 입력되지 않았네요")
         e.preventDefault
-        alert("아이디 값이 입력되지 않음")
-    } 
-
-    if (document.querySelector("#password-control").value===""){
-        e.preventDefault
-        alert("비밀번호 값이 입력되지 않음")
     }
-
+    if(document.querySelector("#password-control").value===""){
+        alert("비밀번호 값이 입력되지 않았네요")
+        e.preventDefault
+    }
+    if(document.querySelector("#password-control").value.length<4){
+        alert("비밀번호가 너무 짧다")
+    }
 })
+
+
+function game (num){
+    if(num%2 ===0){
+        console.log("2의 배수가 나왔습니다")
+    } else {
+        console.log("2의 배수가 나오지 않았습니다")
+    }
+}
+game();
+
+
+공부한 내용 설명 if/else, function 실력향상 과제 부분을 진행중이며 첫번째 과제를 다시해보길 추천
