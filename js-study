@@ -76,12 +76,32 @@ console.log("-----------------")
 
 let count = 0;
 
-document.querySelector(".badge").addEventListener("click",function(){
-    count = count+1;
-    console.log(count);
-})
-
 // count 가 홀수만 다크모드 버튼 눌럿을때 색 변하게 짝수면 다시 색 변하게 //
 
 
+document.querySelector(".badge").addEventListener("click",function(){
+    count = count+1;
+    if(count%2=="0"){
+        console.log("짝수")
+        
+        document.querySelector(".bg-dark").textContent="Dark🔄"
+        document.getElementById("dark").classList.add("darkmod")
+    }
+    else{
+        console.log("홀수")
 
+        document.querySelector(".bg-dark").textContent="Light🔄"
+        document.getElementById("dark").classList.remove("darkmod")
+    }
+});
+
+
+let name = "이재진";
+
+function math (){
+    let name = "재진";
+    console.log(name)
+}
+
+
+레벨2 첫수업 들을시간
