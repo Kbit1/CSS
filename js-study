@@ -1,107 +1,13 @@
-// document.querySelector("#submit-btn").addEventListener("click",function(e){
-//     if(document.querySelector("#text-control").value===""){
-//         e.preventDefault
-//         alert("아이디 값이 입력되지 않음")
-//     } 
-// })
-
-// document.querySelector("#submit-btn").addEventListener("click",function(e){
-//     if(document.querySelector("#password-control").value===""){
-//         e.preventDefault
-//         alert("비밀번호 값이 입력되지 않음")
-//     } 
-// })
-
-
-document.querySelector("#submit-btn").addEventListener("click",function(e){
-    if(document.querySelector("#text-control").value===""){
-        alert("아이디 값이 입력되지 않았네요")
-        e.preventDefault
-    }
-    if(document.querySelector("#password-control").value===""){
-        alert("비밀번호 값이 입력되지 않았네요")
-        e.preventDefault
-    }
-    if(document.querySelector("#password-control").value.length<4){
-        alert("비밀번호가 너무 짧다")
-    }
+document.querySelector(".slide-2").addEventListener("click",function(){
+    document.querySelector(".slide-container").style.transform="translateX(-100vw)"
 })
 
+document.querySelector(".slide-3").addEventListener("click",function(){
+    document.querySelector(".slide-container").style.transform="translateX(-200vw)"
+})
 
-function game(num){
-    if(num%9=="0"){
-        console.log("박수X2")
-    } else if (num%3=="0"){
-        console.log("박수")
-    } else {
-        console.log("통과")
-    }
-}
+document.querySelector(".slide-1").addEventListener("click",function(){
+    document.querySelector(".slide-container").style.transform="translateX(0vw)"
+})
 
-game(11);
-
-console.log("-------------")
-
-
-// function enter(){
-//     if(eng+math>120){
-//         console.log("합격")
-//     }
-//     else if(eng+math<120){
-//         console.log("불합격")
-//     }
-//     else if(eng<40){
-//         console.log("불합격")
-//     }
-//     else if(math<40){
-//         console.log("불합격")
-//     }
-// }
-
-
-function enter(eng,math){
-    if(eng<40 || math<40){
-        console.log("불합격")
-    } else if (eng+math>120){
-        console.log("합격")
-    } else {
-        console.log("불합격")
-    }
-}
-
-enter(50,50);
-
-
-console.log("-----------------")
-
-let count = 0;
-
-// count 가 홀수만 다크모드 버튼 눌럿을때 색 변하게 짝수면 다시 색 변하게 //
-
-
-document.querySelector(".badge").addEventListener("click",function(){
-    count = count+1;
-    if(count%2=="0"){
-        console.log("짝수")
-        
-        document.querySelector(".bg-dark").textContent="Dark🔄"
-        document.getElementById("dark").classList.add("darkmod")
-    }
-    else{
-        console.log("홀수")
-
-        document.querySelector(".bg-dark").textContent="Light🔄"
-        document.getElementById("dark").classList.remove("darkmod")
-    }
-});
-
-
-let name = "이재진";
-
-function math (){
-    let name = "재진";
-    console.log(name)
-}
-
-
-레벨2 첫수업 들을시간
+코드 3줄로 캐러셀 (이미지 슬라이드) 만들기 2 들으면됨 숙제 완료 
