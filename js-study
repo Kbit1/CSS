@@ -1,13 +1,27 @@
-document.querySelector(".slide-2").addEventListener("click",function(){
+document.querySelector(".btn2").addEventListener("click",function(){
     document.querySelector(".slide-container").style.transform="translateX(-100vw)"
 })
 
-document.querySelector(".slide-3").addEventListener("click",function(){
+document.querySelector(".btn3").addEventListener("click",function(){
     document.querySelector(".slide-container").style.transform="translateX(-200vw)"
 })
 
-document.querySelector(".slide-1").addEventListener("click",function(){
+document.querySelector(".btn1").addEventListener("click",function(){
     document.querySelector(".slide-container").style.transform="translateX(0vw)"
 })
 
-코드 3줄로 캐러셀 (이미지 슬라이드) 만들기 2 들으면됨 숙제 완료 
+//
+
+
+let count = 0;
+document.querySelector(".btn-next").addEventListener("click",function(){
+    count++;
+
+    if(count==1){
+        document.querySelector(".slide-container").style.transform="translateX(-100vw)"
+    } else if(count==2){
+        document.querySelector(".slide-container").style.transform="translateX(-200vw)"
+    }
+})
+
+// 여기 까지 이미지 슬라이드 연습//
