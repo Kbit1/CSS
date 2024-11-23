@@ -24,13 +24,27 @@ document.querySelector(".btn-next").addEventListener("click",function(){
     }
 })
 
-// 여기 까지 이미지 슬라이드 연습//
+// function 함수(a,b){
+//     let result = (a*1000 + b*100)+10000
+//     return result;
+// }
 
-function 함수(a,b){
-    let result = (a*1000 + b*100)+10000
-    return result;
-}
+// console.log(함수(2,10))
+// //
 
-console.log(함수(2,10))
+// function 함수 (a,b){
+//     let result = a*0.9
+//     if (b==true){
+//         result=result-1.5;
+//     }
+//     return result;
+// }
 
-함수의 return 문법 & 소수 다루기 2번 숙제 진행중
+window.addEventListener("scroll",function(){
+    console.log(window.scrollY);
+})
+
+
+// 스크롤을 다 내려야 약관을 다 읽었군요 와 같은 alert창 만들어보기 숙제2//
+
+///스크롤 이벤트로 만드는 재밌는 기능들 강의 듣고 다시 숙제 진행하기
