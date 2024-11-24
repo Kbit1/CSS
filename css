@@ -16,3 +16,27 @@ nav div {
     width: 100vw; background: lightgray;
     height: 100px; position: fixed; z-index: 1; font-size: 35px;
 }
+
+.main-nav{
+    transition: 1s;
+}
+
+/* .testhas{
+    width: 1200px;
+    height: 10px;
+    margin-top: 150px;
+    background:black;
+} */
+
+
+.testhas {
+    width: 100%; /* 고정 너비 */
+    height: 50px; /* 높이 설정 */
+
+    background: linear-gradient(to right, black 0%, red 0%); /* 초기 상태 */
+
+    background-size: 0% 100%; /* 초기 배경 크기 */
+    
+    background-repeat: no-repeat; /* 반복 방지 */
+
+    transition: background-size 0.1s linear; /* 부드러운 변화 */}
