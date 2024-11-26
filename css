@@ -1,42 +1,36 @@
-.slide-container{
-    width: 300vw; 
-    transition: 1s;
+ul.list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ccc;
 }
-
-.slide-box{
-    width: 100vw;
+ul.list::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.tab-button {
+    display: block;
+    padding: 10px 20px 10px 20px;
     float: left;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    color: grey;
+    text-decoration: none;
+    cursor: pointer;
 }
-
-.slide-box img{
-width: 100vw;
+.orange {
+    border-top: 2px solid orange;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid white;
+    border-left: 1px solid #ccc;
+    color: black;
+    margin-top: -2px;
 }
-
-nav div {
-    width: 100vw; background: lightgray;
-    height: 100px; position: fixed; z-index: 1; font-size: 35px;
+.tab-content {
+    display: none;
+    padding: 10px;
 }
-
-.main-nav{
-    transition: 1s;
+.show {
+    display: block;
 }
-
-/* .testhas{
-    width: 1200px;
-    height: 10px;
-    margin-top: 150px;
-    background:black;
-} */
-
-
-.testhas {
-    width: 100%; /* 고정 너비 */
-    height: 50px; /* 높이 설정 */
-
-    background: linear-gradient(to right, black 0%, red 0%); /* 초기 상태 */
-
-    background-size: 0% 100%; /* 초기 배경 크기 */
-    
-    background-repeat: no-repeat; /* 반복 방지 */
-
-    transition: background-size 0.1s linear; /* 부드러운 변화 */}
