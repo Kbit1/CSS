@@ -37,10 +37,11 @@ for (let i=0; document.querySelectorAll(".tab-button").length; i++){
 // })
 
 
-for (let i=3; i<6; i++){
-    console.log("ㅎㅇ")
-}
-
-for(let i=0; i<5; i++){
-    console.log("ㅎㅇ")
-}
+document.querySelector(".list").click(function(e){
+    if(e.target == document.querySelectorAll(".tab-button")[0]){
+    }
+    if(e.target == document.querySelectorAll(".tab-button")[1]){
+    }
+    if(e.target == document.querySelectorAll(".tab-button")[2]){
+    }
+})
