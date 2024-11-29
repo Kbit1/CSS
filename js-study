@@ -45,3 +45,5 @@ document.querySelector(".list").click(function(e){
     if(e.target == document.querySelectorAll(".tab-button")[2]){
     }
 })
+
+Array 와 Object 자료형
