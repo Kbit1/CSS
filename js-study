@@ -1,17 +1,13 @@
-document.querySelectorAll(".form-select")[0].addEventListener("input",function(){
-    let value = document.querySelectorAll(".form-select")[0].value;
-    if(value =="셔츠"){
-        document.querySelectorAll(".form-select")[1].classList.remove("form-hide")
-    } else if(value=="바지"){
-        document.querySelectorAll(".form-select")[1].classList.remove("form-hide")
-        let 템플릿 = `<option>28</option><option>30</option>`;
-        document.querySelectorAll(".form-select")[1].innerHTML=템플릿;
-    }
-})
+function 작명(displays,displays2){
+    document.querySelector('.alert').style.display=displays;
+    document.querySelector('.war').textContent=displays2;
 
-let a = document.createElement("p");
-a.innerHTML = "테스트중입니다";
-document.querySelector("#testt").appendChild(a);
+
+    document.querySelector('.alert').style.display=displays;
+    document.querySelector('.war').textContent=displays2;
+}
 
 
 
+자바스크립트 이벤트리스너 5분 24초 까지 들음
+파라미터를 활용하여 함수 한개에 전부 담는것에 성공
