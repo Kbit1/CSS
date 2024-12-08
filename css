@@ -7,7 +7,8 @@
     background : rgba(0,0,0,0.5);
     z-index : 5;
     padding: 30px;
-    display: none;
+    visibility: hidden;
+    opacity: 0; transition:1s;
 }
 .white-bg {
     background: white;
@@ -15,4 +16,6 @@
     padding: 30px;
 }
 
-.show{display: block;}
+.show{visibility:visible; opacity: 1;}
+
+.main-bg{padding: 100px 20px; background: lightgray;}
