@@ -10,7 +10,6 @@ $("#close").on("click",function(){
     $(".black-bg").removeClass("show")
 })
 
-
     document.querySelector(".btn-primary").addEventListener("click",function(e){
         if(document.querySelectorAll(".form-control")[0].value===""){
             alert("아이디를 입력하세요");
@@ -26,3 +25,25 @@ $("#close").on("click",function(){
     })
 
 
+function 삼육구게임(a){
+    if(a%9==0){
+        console.log("박수두번")
+    } else if (a%3==0){
+        console.log("박수")
+    } else{
+        console.log("통과")
+    }
+
+}
+
+삼육구게임(9);
+
+function 합격했냐(a,b){
+    if(a>40 && b>40 && a+b>120){
+        console.log("합격")
+    } else{
+        console.log("불합격")
+    }
+}
+
+합격했냐(50,50);
