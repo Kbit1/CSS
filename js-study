@@ -47,3 +47,20 @@ function 합격했냐(a,b){
 }
 
 합격했냐(50,50);
+
+let count = 0;
+
+$(".badge").on("click",function(){
+    count +=1;
+    
+    if(count%2==0){
+        $("body").css("background-color","black");
+        $("body").css("color","white");
+    } else{
+        $("body").css("background-color","white");
+        $("body").css("color","black");
+    }
+})
+
+ 12 분☀️
+변수문법과 Dark mode 버튼만들기 까지듣고 숙제완료
