@@ -53,14 +53,49 @@ let count = 0;
 $(".badge").on("click",function(){
     count +=1;
     
-    if(count%2==0){
-        $("body").css("background-color","black");
-        $("body").css("color","white");
-    } else{
-        $("body").css("background-color","white");
-        $("body").css("color","black");
-    }
+if(count % 2 == 1){
+    $(".badge").text("Light 🔄")
+    $("body").css("background","black").css("color","white")
+}else{
+    $(".badge").text("dark 🔄")
+    $("body").css("background","white").css("color","black")
+}
 })
 
- 12 분☀️
-변수문법과 Dark mode 버튼만들기 까지듣고 숙제완료
+
+let 예금액 = 60000;
+let 미래예금액 = 0;
+
+미래예금액 = 예금액*1.2*1.2;
+
+console.log(미래예금액);
+
+if(예금액>=50000){
+    미래예금액 = 예금액*1.2*1.2
+} else {
+    미래예금액 = 예금액*1.15*1.15
+}
+
+console.log("-------");
+
+let first = 360;
+let total = 0;
+
+total = first + first *2/3 + first*2/3 *2/3
+
+let counts = 0;
+$("#send-answer").on("click",function(){
+
+    counts = counts+1;
+
+    if($("#answer").val()==1335){
+        alert("성공")
+    }   else if($("#answer").val()!=1335){
+        alert("실패")
+    } else if(counts==3){
+        alert("바보")
+    }
+
+
+})
+setTimeout 타이머주는 법 시작해야함
