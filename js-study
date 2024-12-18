@@ -96,6 +96,34 @@ $("#send-answer").on("click",function(){
         alert("바보")
     }
 
-
 })
-setTimeout 타이머주는 법 시작해야함
+
+
+// setTimeout(function(){
+//     $(".alert").text("4")
+// },1000)
+
+// setTimeout(function(){
+//     $(".alert").text("3")
+// },2000)
+
+// setTimeout(function(){
+//     $(".alert").text("2")
+// },3000)
+
+// setTimeout(function(){
+//     $(".alert").text("1")
+// },4000)
+
+let countss = 0;
+
+setInterval(function(){
+    countss +=1;
+    if(countss<=5){
+        $(".alert span").text(countss)
+    }
+},1000);
+ 11 분☀️
+정규식으로 이메일형식 검증해보기
+
+
