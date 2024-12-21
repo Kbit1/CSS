@@ -19,3 +19,15 @@
 .show{visibility:visible; opacity: 1;}
 
 .main-bg{padding: 100px 20px; background: lightgray;}
+
+.slide-container{
+    width: 305%; display: flex;
+}
+
+.slide-box{
+    width: 100%;
+}
+
+.slide-box img{
+    width: 100%; 
+}
