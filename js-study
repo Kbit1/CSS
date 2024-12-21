@@ -151,3 +151,34 @@ console.log(/\S@\S.\S/.test("cjasenavercom"));
   
 //   });
 
+$(".slide-1").on("click",function(){
+    $(".slide-container").css("transform","translateX(0%)");
+})
+
+$(".slide-2").on("click",function(){
+    $(".slide-container").css("transform","translateX(-33%)");
+})
+
+$(".slide-3").on("click",function(){
+    $(".slide-container").css("transform","translateX(-66%)");
+})
+
+let countcar = 0 ;
+
+$(".slide-4").on("click",function(){
+    countcar = countcar+1;
+    if(countcar==1){
+        $(".slide-container").css("transform","translateX(-33%)");
+
+    }
+    else if (countcar==2){
+        $(".slide-container").css("transform","translateX(-66%)");
+
+    }
+    else {
+        $(".slide-container").css("transform","translateX(0%)");
+    }
+
+})
+
+
