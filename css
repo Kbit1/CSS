@@ -21,7 +21,8 @@
 .main-bg{padding: 100px 20px; background: lightgray;}
 
 .slide-container{
-    width: 305%; display: flex;
+    width: 300%; display: flex; 
+    transition: all 1s;
 }
 
 .slide-box{
@@ -30,4 +31,12 @@
 
 .slide-box img{
     width: 100%; 
+}
+
+.navbar{
+    position:fixed; width: 100%; z-index: 5;
+}
+
+.navbar-brand{
+    font-size: 30px;
 }
