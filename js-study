@@ -288,12 +288,43 @@
 
 for (let i = 0; i < 3; i++) {
     $(".tab-button").eq(i).on("click", function () {
-        $(".tab-button").removeClass("orange");
-        $(".tab-button").eq(i).addClass("orange");
-        $(".tab-content").removeClass("show");
-        $(".tab-content").eq(i).addClass("show");
-    });
+    탭열기(i)
+});
+}
+
+function 탭열기(숫자){
+    $(".tab-button").removeClass("orange");
+    $(".tab-button").eq(숫자).addClass("orange");
+    $(".tab-content").removeClass("show");
+    $(".tab-content").eq(숫자).addClass("show");
 }
 
 
-이벤트 버블링과 이벤트관련 함수들
+console.log("-------------")
+
+// let car = ["소나타" , 50000 , "white"]
+// let car2 = {name:"소나타" , price:[50000,3000,4000] , color:"white"}
+
+// $(".card span:eq(0)").text(car2.name)
+// $(".card span:eq(1)").text(car2.price[0])
+
+
+let products = [
+    { id : 0, price : 70000, title : 'Blossom Dress' },
+
+    { id : 1, price : 50000, title : 'Springfield Shirt' },
+
+    { id : 2, price : 60000, title : 'Black Monastery' }
+];
+
+
+$(".card-body:eq(0) h5").text(products[0].title)
+$(".card-body:eq(0) p").text("가격 : " + products[0].price)
+
+$(".card-body:eq(1) h5").text(products[1].title)
+$(".card-body:eq(1) p").text("가격 : " + products[1].price)
+
+$(".card-body:eq(2) h5").text(products[2].title)
+$(".card-body:eq(2) p").text("가격 : " + products[2].price)
+
+Select 인풋 다루기 수업들어야함
