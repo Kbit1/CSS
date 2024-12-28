@@ -327,4 +327,41 @@ $(".card-body:eq(1) p").text("가격 : " + products[1].price)
 $(".card-body:eq(2) h5").text(products[2].title)
 $(".card-body:eq(2) p").text("가격 : " + products[2].price)
 
-Select 인풋 다루기 수업들어야함
+
+
+
+// $(".form-select").eq(0).on("input",function(){
+//     let value = this.value;
+
+//     if(value == "셔츠") {
+//         $(".form-select").eq(1).removeClass("mt-3")
+//     }
+// })
+
+// $(".form-select").eq(0).on("input",function(){
+//     if($(".form-select").eq(0).val() == "모자") {
+//         $(".form-select").eq(1).addClass("mt-3")
+//     }
+
+// })
+
+// $(".form-select").eq(0).on("change",function(){
+//     if($(this).val()=="바지"){
+//         let add = "<option>30</option> <option>34</option>"
+
+//         $(".form-select.mt-3").html(add);
+//     }
+// })
+
+
+$(".mt-2").on("click",function(){
+    if($(this).val()=="셔츠"){
+        $(".form-select").eq(1).removeClass("mt-3")
+    }
+    else if ($(this).val()=="바지"){
+        $(".form-select").eq(1).html(`
+            <option>28</option>
+            <option>30</option>
+            <option>32</option>`)
+    }
+})
