@@ -365,3 +365,7 @@ $(".mt-2").on("click",function(){
             <option>32</option>`)
     }
 })
+
+
+Select 2 : 자바스크립트로 html 생성하는 법
+까지 들었음 완료
