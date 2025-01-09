@@ -1,3 +1,7 @@
-h2{
-    color:red; border:2px solid black;
+.alert-box{
+    background:skyblue;
+    padding: 20px;
+    color:white;
+    border-radius: 5px;
+    display: none;
 }
