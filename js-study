@@ -1,5 +1,21 @@
 $(function(){
+    //알림창 파라미터 함수
+    function 버튼조작(e){
+        $(".alert-box").css({display:e});
+    }
+
+    //알림창 보이기//
+    $(".open").on("click",function(){
+        버튼조작("block")
+    })
+
+    //알림창 닫기//
+    $(".close").on("click",function(){
+        버튼조작("none")
+    })
+
+    
 
 
-
-})
+});
+//function의 파라미터 문법 까지 함 숙제는 버튼1 버튼2를 눌렀을때 아이디를 입력하세요 / 비밀번호를 입력하세요 나오게 만들어보기//
