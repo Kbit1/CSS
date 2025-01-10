@@ -1,35 +1,33 @@
 $(function(){
-    //알림창 파라미터 함수
-    function 버튼조작(e){
-        $(".alert-box").css({display:e});
+
+//navbar 버튼 클릭시 항목//
+$(".navbar-toggler").on("click",function(){
+    $(".list-group").stop().toggleClass("show")
+})
+
+//모달창 중복을 함수로 저장//
+function 모달창중복(e){
+    $(".black-bg").css({display:e});
+    $(".white-bg").css({display:e});
+}
+
+//로그인 클리시 모달창//
+$(".login").on("click",function(){
+    모달창중복("block")
+})
+
+//모달창 닫기//
+$("#close").on("click",function(){
+    모달창중복("none")
+})
+
+//
+$(".btn-primary").on("click",function(){
+    if( $("input").val() == ("") ){
+        alert("입력X")
     }
-
-    //버튼 1 2 파라미터 함수
-    function 버튼12함수(e){
-        $(".alert-box p").text(e)
-    }
-
-    //알림창 보이기//
-    $(".open").on("click",function(){
-        버튼조작("block")
-    })
-
-    //알림창 닫기//
-    $(".close").on("click",function(){
-        버튼조작("none")
-    })
-
-    //버튼1 아이디를 입력하세요//
-    $(".btn1").on("click",function(){
-        버튼12함수("아이디를 입력하세요")
-    })
-
-    //버튼2 비밀번호를 입력하세요//
-    $(".btn2").on("click",function(){
-        버튼12함수("비밀번호를 입력하세요")
-    })
-
-
+})
 
 });
-//서브메뉴 만들어보기와 classList 다루기 듣기기
+
+// 공백검사 숙제와 else if 문법 을 들어야 하며 숙제 완료 숙제는 섬밋일시 공백인지 확인하는것으로 마지막 코드임 //
