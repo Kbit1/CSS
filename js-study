@@ -34,8 +34,33 @@ $(function(){
         }
     })
 
+    //클릭시 다크모드 라이트모드 변경
+    let count = 0;
+    $(".badge").on("click",function(){
+        count +=1;
+        if(count ==1){
+            $("body").css({background:"black",color:"white"})
+            $(".badge span").text("Light")
+        } else {
+            $("body").css({background:"white",color:"black"})
+            $(".badge span").text("Dark")
+            count = 0
+        }
+    })
 
+    let 예금액 = 60000;
+    let 미래예금액 = 0;
+
+    if(예금액>=50000){
+        미래예금액 = 예금액 * 1.2 * 1.2
+    } else if(예금액<50000){
+        미래예금액 = 예금액 *1.15 *1.15
+    }
+    console.log(미래예금액)
 
     });
 
-//input, change 이벤트와 and, or 연산자 까지 완료
+변수, 사칙연산 실력향상 과제
+Q4. 커피 리필을 이상하게 해주는 곳이 있습니다. 최대한 마실 수 있는 커피양을 계산해봅시다. 
+문제 풀기
+
