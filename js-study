@@ -1,33 +1,41 @@
 $(function(){
 
-//navbar 버튼 클릭시 항목//
-$(".navbar-toggler").on("click",function(){
-    $(".list-group").stop().toggleClass("show")
-})
-
-//모달창 중복을 함수로 저장//
-function 모달창중복(e){
-    $(".black-bg").css({display:e});
-    $(".white-bg").css({display:e});
-}
-
-//로그인 클리시 모달창//
-$(".login").on("click",function(){
-    모달창중복("block")
-})
-
-//모달창 닫기//
-$("#close").on("click",function(){
-    모달창중복("none")
-})
-
-//
-$(".btn-primary").on("click",function(){
-    if( $("input").val() == ("") ){
-        alert("입력X")
+    //navbar 버튼 클릭시 항목//
+    $(".navbar-toggler").on("click",function(){
+        $(".list-group").stop().toggleClass("show")
+    })
+    
+    //모달창 중복을 함수로 저장//
+    function 모달창중복(e){
+        $(".black-bg").css({display:e});
+        $(".white-bg").css({display:e});
     }
-})
+    
+    //로그인 클리시 모달창//
+    $(".login").on("click",function(){
+        모달창중복("block")
+    })
+    
+    //모달창 닫기//
+    $("#close").on("click",function(){
+        모달창중복("none")
+    })
+    
+    //전송버튼 눌렀을때 공백검사
+    $(".btn-primary").on("click",function(e){
+        if( $("#email").val() == ("") ){
+            alert("이메일을 입력해주세요");
+            e.preventDefault();
+        }
+        //비밀번호는 6자리 미만이면 길게 입력하라고 나온다
+        if( $("#password").val().length <= 6 ){
+            alert("비밀번호를 길게 입력햊주세요");
+            e.preventDefault();
+        }
+    })
 
-});
 
-// 공백검사 숙제와 else if 문법 을 들어야 하며 숙제 완료 숙제는 섬밋일시 공백인지 확인하는것으로 마지막 코드임 //
+
+    });
+
+//input, change 이벤트와 and, or 연산자 까지 완료
