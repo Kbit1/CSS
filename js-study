@@ -1,3 +1,13 @@
+// 5초 마다 실행되는 셋인터벌//
+let setcount =5;
+setInterval(function(){
+    setcount -= 1
+    if(setcount>=0){
+        $(".alert-danger span").text(setcount);
+    }
+},1000);
+
+
 $(function(){
 
     //navbar 버튼 클릭시 항목//
@@ -23,14 +33,22 @@ $(function(){
     
     //전송버튼 눌렀을때 공백검사
     $(".btn-primary").on("click",function(e){
-        if( $("#email").val() == ("") ){
+        if( $("#email").val() == ("")){
             alert("이메일을 입력해주세요");
             e.preventDefault();
         }
         //비밀번호는 6자리 미만이면 길게 입력하라고 나온다
         if( $("#password").val().length <= 6 ){
-            alert("비밀번호를 길게 입력햊주세요");
+            alert("비밀번호를 길게 입력해주세요");
             e.preventDefault();
+        }
+
+        if (!/\S+@\S+\.\S+/.test($("#email").val())) {
+            alert("이메일 형식이 아닙니다");
+        }
+
+        if (!/[A-Z]/.test($("#password").val())) {
+            alert("비밀번호에 대문자를 입력하세요")
         }
     })
 
@@ -48,19 +66,24 @@ $(function(){
         }
     })
 
-    let 예금액 = 60000;
-    let 미래예금액 = 0;
+    //1 2 3 이미지 슬라이드//
+        function 슬라이드컨테이너(e){
+            $(".slide-container").css({transform:`translateX(${e})`})
+        }
 
-    if(예금액>=50000){
-        미래예금액 = 예금액 * 1.2 * 1.2
-    } else if(예금액<50000){
-        미래예금액 = 예금액 *1.15 *1.15
-    }
-    console.log(미래예금액)
+        $(".slide-1").on("click",function(){
+            슬라이드컨테이너(0);
+        })
 
+        $(".slide-2").on("click",function(){
+            슬라이드컨테이너("-33%");
+        })
+
+        $(".slide-3").on("click",function(){
+            슬라이드컨테이너("-66%");
+        })
+
+        //다음버튼 만들어보기//
     });
 
-변수, 사칙연산 실력향상 과제
-Q4. 커피 리필을 이상하게 해주는 곳이 있습니다. 최대한 마실 수 있는 커피양을 계산해봅시다. 
-문제 풀기
-
+    
