@@ -69,7 +69,7 @@ $(function(){
     //1 2 3 이미지 슬라이드//
 
         function 슬라이드컨테이너(e){
-            $(".slide-container").css({transform:`translateX(-${e*slideyard}%)`})
+            $(".slide-container").css({transform:`translateX(${e})`})
         }
 
 
@@ -79,28 +79,63 @@ $(function(){
 
         $(".slide-1").on("click",function(){
             slidecount = 0
-            슬라이드컨테이너(slidecount)
+            슬라이드컨테이너(`-${slidecount*slideyard}%`)
         })
         $(".slide-2").on("click",function(){
             slidecount = 1
-            슬라이드컨테이너(slidecount)
+            슬라이드컨테이너(`-${slidecount*slideyard}%`)
         })
         $(".slide-3").on("click",function(){
             slidecount = 2
-            슬라이드컨테이너(slidecount)
+            슬라이드컨테이너(`-${slidecount*slideyard}%`)
         })
 
         $(".slide-next").on("click",function(){
             if(slidecount < totalslide){
                 slidecount++
-                슬라이드컨테이너(slidecount)
+                슬라이드컨테이너(`-${slidecount*slideyard}%`)
             }  else {
                 slidecount = 0
-                슬라이드컨테이너(slidecount)
+                슬라이드컨테이너(`-${slidecount*slideyard}%`)
             }
 
         })
 
+        function 슬라이드컨테이너(e){
+            $(".slide-container").css({transform:`translateX(-${e*slideyard}%)`})
+        }
+
+
+        // let slidecount = 0
+        // let totalslide = 2
+        // let slideyard = 33
+
+        // $(".slide-1").on("click",function(){
+        //     slidecount = 0
+        //     슬라이드컨테이너(slidecount)
+        // })
+        // $(".slide-2").on("click",function(){
+        //     slidecount = 1
+        //     슬라이드컨테이너(slidecount)
+        // })
+        // $(".slide-3").on("click",function(){
+        //     slidecount = 2
+        //     슬라이드컨테이너(slidecount)
+        // })
+
+        // $(".slide-next").on("click",function(){
+        //     if(slidecount < totalslide){
+        //         slidecount++
+        //         슬라이드컨테이너(slidecount)
+        //     }  else {
+        //         slidecount = 0
+        //         슬라이드컨테이너(slidecount)
+        //     }
+
+        // })
+
 
 
     });
+
+//슬라이드 이전 다음 버튼 계속 해서 연습해보기//
