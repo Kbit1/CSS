@@ -69,45 +69,37 @@ $(function(){
     //1 2 3 이미지 슬라이드//
 
         function 슬라이드컨테이너(e){
-            $(".slide-container").css({transform:`translateX(${e})`})
+            $(".slide-container").css({transform:`translateX(-${e*slideyard}%)`})
         }
 
-    let currentIndex = 0; 
-    const totalSlides = 3; // 총 슬라이드 개수
-    const slideWidth = 33; // 슬라이드 이동 거리 (%)
 
-    $(".slide-1").on("click", function(){
-        슬라이드컨테이너("0%");
-        currentIndex = 0;
-    });
-    $(".slide-2").on("click", function(){
-        슬라이드컨테이너(`-${slideWidth}%`);
-        currentIndex = 1;
-    });
-    $(".slide-3").on("click", function(){
-        슬라이드컨테이너(`-${slideWidth * 2}%`);
-        currentIndex = 2;
-    });
+        let slidecount = 0
+        let totalslide = 2
+        let slideyard = 33
 
-    $(".slide-next").on("click", function(){
-        if (currentIndex < totalSlides - 1) {
-            currentIndex++;
-        } else {
-            currentIndex = 0; // 마지막 슬라이드 이후 다시 첫 번째로 이동
-        }
-        슬라이드컨테이너(`-${slideWidth * currentIndex}%`);
-    });
+        $(".slide-1").on("click",function(){
+            slidecount = 0
+            슬라이드컨테이너(slidecount)
+        })
+        $(".slide-2").on("click",function(){
+            slidecount = 1
+            슬라이드컨테이너(slidecount)
+        })
+        $(".slide-3").on("click",function(){
+            slidecount = 2
+            슬라이드컨테이너(slidecount)
+        })
 
-    $(".slide-before").on("click",function(){
-        if(currentIndex >0){
-            currentIndex --
-        }else {
-            currentIndex =  totalSlides - 1; // 마지막 슬라이드 이후 다시 첫 번째로 이동
-        }
-        슬라이드컨테이너(`-${slideWidth * currentIndex}%`);
-    })
-    
-            
+        $(".slide-next").on("click",function(){
+            if(slidecount < totalslide){
+                slidecount++
+                슬라이드컨테이너(slidecount)
+            }  else {
+                slidecount = 0
+                슬라이드컨테이너(slidecount)
+            }
+
+        })
 
 
 
