@@ -68,74 +68,50 @@ $(function(){
 
     //1 2 3 이미지 슬라이드//
 
-        function 슬라이드컨테이너(e){
-            $(".slide-container").css({transform:`translateX(${e})`})
-        }
+    let slidecount = 0;
+    let totalslide = 3;
+    let totalyard = 33;
 
+    function 이동거리함수(e){
+        $(".slide-container").css({transform:`translateX(${e}%)`})
+    }
 
-        let slidecount = 0
-        let totalslide = 2
-        let slideyard = 33
+    $(".slide-1").on("click",function(){
+        slidecount=0
+        이동거리함수(0)
+    })
 
-        $(".slide-1").on("click",function(){
+    $(".slide-2").on("click",function(){
+        slidecount=1
+        이동거리함수(-33)
+    })
+
+    $(".slide-3").on("click",function(){
+        slidecount=2
+        이동거리함수(-66)
+    })
+
+    $(".slide-next").on("click",function(){
+        if(slidecount < totalslide -1){
+            slidecount ++
+            이동거리함수( slidecount * (-totalyard) )
+            console.log(slidecount + "next 카운트 계싼")
+        } else {
+            이동거리함수(0)
             slidecount = 0
-            슬라이드컨테이너(`-${slidecount*slideyard}%`)
-        })
-        $(".slide-2").on("click",function(){
-            slidecount = 1
-            슬라이드컨테이너(`-${slidecount*slideyard}%`)
-        })
-        $(".slide-3").on("click",function(){
-            slidecount = 2
-            슬라이드컨테이너(`-${slidecount*slideyard}%`)
-        })
-
-        $(".slide-next").on("click",function(){
-            if(slidecount < totalslide){
-                slidecount++
-                슬라이드컨테이너(`-${slidecount*slideyard}%`)
-            }  else {
-                slidecount = 0
-                슬라이드컨테이너(`-${slidecount*slideyard}%`)
-            }
-
-        })
-
-        function 슬라이드컨테이너(e){
-            $(".slide-container").css({transform:`translateX(-${e*slideyard}%)`})
         }
+    })
 
-
-        // let slidecount = 0
-        // let totalslide = 2
-        // let slideyard = 33
-
-        // $(".slide-1").on("click",function(){
-        //     slidecount = 0
-        //     슬라이드컨테이너(slidecount)
-        // })
-        // $(".slide-2").on("click",function(){
-        //     slidecount = 1
-        //     슬라이드컨테이너(slidecount)
-        // })
-        // $(".slide-3").on("click",function(){
-        //     slidecount = 2
-        //     슬라이드컨테이너(slidecount)
-        // })
-
-        // $(".slide-next").on("click",function(){
-        //     if(slidecount < totalslide){
-        //         slidecount++
-        //         슬라이드컨테이너(slidecount)
-        //     }  else {
-        //         slidecount = 0
-        //         슬라이드컨테이너(slidecount)
-        //     }
-
-        // })
+    $(".slide-before").on("click",function(){
+        if(slidecount>0){
+            slidecount--
+            이동거리함수(slidecount * (-totalyard) )
+        } else {
+            이동거리함수(-66)
+            slidecount =2
+        }
+    })
 
 
 
     });
-
-//슬라이드 이전 다음 버튼 계속 해서 연습해보기//
