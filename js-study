@@ -67,7 +67,6 @@ $(function(){
     })
 
     //1 2 3 이미지 슬라이드//
-
     let slidecount = 0;
     let totalslide = 3;
     let totalyard = 33;
@@ -112,6 +111,30 @@ $(function(){
         }
     })
 
+    // 스크롤 이벤트 스크롤 내리면 Navbar 글씨 사라지고 생성되고 //
+    $(window).on("scroll",function(){
+        let navscroll = $(window).scrollTop()
 
+        if(navscroll > 490){
+            $(".navbar-brand").fadeOut()
+        } else if(navscroll < 5){
+            $(".navbar-brand").fadeIn()
+        }
+    })
+
+    // 박스를 다 읽었는지 확인하는 제이쿼리 //
+    $(".lorem").on("scroll",function(){
+
+        let 스크롤양 = $(".lorem").scrollTop() //404
+        let 실제높이 = $(".lorem").get(0).scrollHeight //504
+        let 높이 = $(".lorem").innerHeight(); //100
+
+        console.log(높이)
+        if(스크롤양+높이 > 실제높이 -2){
+            alert("다 읽으셨네요")
+        }
+    })
+
+    //번외 숙제 스크롤에 따라서 막대가 커졌다 작아졌다 하는 제이쿼리 만들어보기//
 
     });
