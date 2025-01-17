@@ -135,7 +135,21 @@ $(function(){
         }
     })
 
-    //번외 숙제 스크롤에 따라서 막대가 커졌다 작아졌다 하는 제이쿼리 만들어보기//
-탭기능 만들며 배우는 for 반복문 듣기
+    //해당 코드는 detail.html js코드이며 클릭시 태그 변경 코드임//
+    $(".tab-button").on("click",function(){
+        let btnindex = $(this).index()
 
+        $(".tab-button").removeClass("orange")
+        $(this).addClass("orange")
+
+        $(".tab-content").removeClass("show")
+        $(".tab-content").eq(btnindex).addClass("show")
+    })
+
+
+
+    // 
+탭기능 만들며 배우는 for 반복문 2   5분30초 까지 시청 //
+
+    //번외 숙제 스크롤에 따라서 막대가 커졌다 작아졌다 하는 제이쿼리 만들어보기//
     });
