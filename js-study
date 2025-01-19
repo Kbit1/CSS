@@ -148,11 +148,15 @@ $(function(){
 
     //로그인 모달창 검정화면 클릭시 없어지는 코드//
     $(".black-bg").on("click",function(){
-        
         $(this).css({display:"none"})
     })
 
+    //detail.html 가격 정보 변수지정//
+    let car = {name :"그렌져", price :70000 , color:"black"}
 
-    //이벤트 버블링 응용과 dataset 듣기
+
+    $(".card span:eq(0)").text(car.name)
+    $(".card span:eq(1)").text(car["price"])
     //번외 숙제 스크롤에 따라서 막대가 커졌다 작아졌다 하는 제이쿼리 만들어보기//
+
     });
