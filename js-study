@@ -146,10 +146,13 @@ $(function(){
         $(".tab-content").eq(btnindex).addClass("show")
     })
 
+    //로그인 모달창 검정화면 클릭시 없어지는 코드//
+    $(".black-bg").on("click",function(){
+        
+        $(this).css({display:"none"})
+    })
 
 
-    // 
-탭기능 만들며 배우는 for 반복문 2    까지 완료
-
+    //이벤트 버블링 응용과 dataset 듣기
     //번외 숙제 스크롤에 따라서 막대가 커졌다 작아졌다 하는 제이쿼리 만들어보기//
     });
