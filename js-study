@@ -152,11 +152,162 @@ $(function(){
     })
 
     //detail.html 가격 정보 변수지정//
-    let car = {name :"그렌져", price :70000 , color:"black"}
-
+    let car = {name :"그렌져", price :[30000,50000,70000] , color:"black"}
 
     $(".card span:eq(0)").text(car.name)
-    $(".card span:eq(1)").text(car["price"])
+    $(".card span:eq(1)").text(car.price[0])
+
+
+
+
+      //detail.html 에서 모자 셔츠 부분//
+      $(".mt-2").on("input",function(){
+
+        if( $(this).val() == "셔츠" ){
+            $(".mt-3").css({display:"block"})
+            $(".mt-4").html(`
+                <option>100</option>
+                <option>105</option>
+                <option>110</option>
+                `)
+
+        } else if ( $(this).val() == "모자" ){
+            $(".mt-4").html(`
+                <option>빨강</option>
+                <option>파랑</option>
+                <option>초록</option>
+                `)
+        } else if($(this).val() == "바지" ){
+            // $(".mt-4").html(`
+            //     <option>28</option>
+            //     <option>30</option>
+            //     <option>32</option>
+            //     `)
+                  //연습용 서버 detail.html 에 사용할것//
+            let pants = [28,30,32];
+
+            pants.forEach(function(e){
+                
+              $(".mt-4").append(
+                  `<option>${e}</option>`
+              )
+            })
+        }
+      })
+
+    
     //번외 숙제 스크롤에 따라서 막대가 커졌다 작아졌다 하는 제이쿼리 만들어보기//
 
-    });
+    //Ajax 연습
+    let products = [
+        { id : 0, price : 100000, title : 'Blossom Dress' },
+        { id : 1, price : 50000, title : 'Springfield Shirt' },
+        { id : 2, price : 20000, title : 'Black Monastery' }
+      ];
+//카드 모양 너무 중복되서 함수로 담아봄//
+      function mathcard(data){
+        return `<div class="col-sm-4">
+        <img src="https://via.placeholder.com/600" class="w-100">
+        <h5>${data.title}</h5>
+        <p>가격 : ${data.price}</p>
+        </div>
+        `
+      }
+
+      products.forEach( (data)=>{
+   //     let card =
+   //     `<div class="col-sm-4">
+   //         <img src="https://via.placeholder.com/600" class="w-100">
+   //         <h5>${data.title}</h5>
+   //         <p>가격 : ${data.price}</p>
+   //     </div>
+   //     `
+        $(".row").append(mathcard(data));
+      });
+
+ 
+
+
+      //버튼 클릭시 서버에서 데이터를 가져온후 그 가져온 값의 어레이로 카드 생성//
+      let btncount =0;
+      $("#btn-more").on("click",()=>{
+        
+        if(btncount==0){
+            $.get("https://codingapple1.github.io/js/more1.json").done( (data) => {
+                data.forEach( (data)=>{
+                    //let btncard =
+                    //`<div class="col-sm-4">
+                    //    <img src="https://via.placeholder.com/600" class="w-100">
+                    //    <h5>${data.title}</h5>
+                    //    <p>가격 : ${data.price}</p>
+                    //</div>
+                    //`
+                    $(".row").append(mathcard(data));
+                })
+                btncount++
+                console.log(btncount)
+            }) //1번째 get닫기//
+        } else if(btncount==1){
+            $.get("https://codingapple1.github.io/js/more2.json").done( (data)=>{
+                data.forEach( (data)=>{
+                    //let btncard2 =
+                    //`<div class="col-sm-4">
+                    //    <img src="https://via.placeholder.com/600" class="w-100">
+                    //    <h5>${data.title}</h5>
+                    //    <p>가격 : ${data.price}</p>
+                    //</div>
+                    //`
+                    $(".row").append(mathcard(data))
+                } )
+                btncount++
+            } )
+        } else if(btncount<=2){
+            $("#btn-more").fadeOut()
+        }
+      }) //btn more 클릭시 닫기//
+
+      //array에 자주 쓰는 sort map fillter //
+
+    $("#price-more").on("click",function(){
+        products.sort((a,b)=>{
+            return a.price - b.price
+        })
+        $(".row").html("")
+        products.forEach((data) => {
+            $(".row").append(mathcard(data));
+        });
+
+    })
+
+    // 클릭시 6만원 아래만 보이게
+    $("#meta-more").on("click",function(){
+        let newfilter = products.filter(function(a){
+            return a.price< 60000
+        })
+        $(".row").html("")
+        newfilter.forEach((data) => {
+            $(".row").append(mathcard(data));
+        });
+    })
+    
+    //클릭시 글자 역순으로 보이게
+    $("#name-more").on("click",function(){
+        products.sort(function(a,b){
+            return b.title.localeCompare(a.title)
+        })
+        $(".row").html("")
+        products.forEach((data) => {
+            $(".row").append(mathcard(data));
+        });
+    })
+
+    let testtt = [1,25,6,3,7];
+    let maybe = testtt.filter(function(a){
+        return a<4
+    })
+    console.log(maybe)
+    }); //ready//
+
+
+//다나가 순으로버튼 생성
+//6만원 이하 상품만 보이기 생성
