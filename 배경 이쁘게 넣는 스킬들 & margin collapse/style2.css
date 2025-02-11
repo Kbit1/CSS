@@ -28,8 +28,25 @@
 }
 
 /* input란 */
-.text-input{
-    padding: 10px; font-size: 20px; border: 2px solid green; border-radius: 5px;
+.input-contact{
+    width: 500px; height: 600px; border: 1px solid black; margin:0 auto; text-align: left;
+    padding: 20px;
+}
+
+.name1,.name2{
+    display: inline-block; margin-top: 30px;
+}
+
+.input-message{
+    margin-top:30px;
+}
+
+.input-message input{
+    height: 200px; width: 440px; margin-top: 10px;
+}
+
+.bottom-input button{
+    margin-left: 240px; color:white; background: orange; border: none;
 }
 
 /* 바텀 공간 여백 만들기 */
