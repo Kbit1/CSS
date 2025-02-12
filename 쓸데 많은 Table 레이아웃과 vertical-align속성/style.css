@@ -1,0 +1,36 @@
+/* 테이블 작업 위에서 아래로 순서대로*/
+
+/* 공통부분 */
+*{margin: 0; padding: 0;}
+#table-cart-warp{
+    background: rgb(136, 136, 206); padding: 20px;
+}
+table{
+    border-collapse: collapse; width: 750px; height: 500px;
+    background: #ffff;
+}
+table td{border-bottom: 1px solid gray; padding: 15px;}
+
+
+/* table 작업 */
+h2{
+    padding: 35px;
+}
+thead tr{
+    color:gray; font-weight: 900;
+}
+td img{
+    width: 100px;
+}
+.cart-bottom{
+    display: flex; padding: 25px;
+}
+.cart-bottom button{
+    margin-left: 350px; color:#ffff; background: coral; font-size: 25px;
+    border-radius: 15px; border: none; padding: 10px; cursor: pointer;
+}
+.cart-bottom button:hover{
+    background:chocolate ;
+}
+
+/* 테스트 */
