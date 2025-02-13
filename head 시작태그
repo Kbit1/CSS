@@ -1,0 +1,22 @@
+head 시작 태그
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="html 시작태그 설정.">
+  <meta name="keywords" content="시작태그 설정">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<!- 링크 이미지 미리보기 태그 ->
+
+<head>
+  <meta property="og:image" content="/이미지경로.jpg">
+  <meta property="og:description" content="사이트설명">
+  <meta property="og:title" content="사이트제목">
+</head>
+
+  <!-title 옆 아이콘 태그->
+  <head>
+  <link rel="icon" href="아이콘경로.ico" type="image/x-icon">
+  </head>
+  사이즈는 32x32로 
