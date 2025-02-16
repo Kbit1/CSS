@@ -3,11 +3,27 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style2.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CSS</title>
     </head>
     <body>
+        <nav>
+            <div id="navbar">
+                <div>
+                    <h1>Logo</h1>
+                </div>
+                <div style="flex-grow: 1;"></div>
+                <div>
+                    <p>products</p>
+                </div>
+                <div>
+                    <p>services</p>
+                </div>
+            </div>
+        </nav>
+
         <div class="main-background">
-            <h4 class="main-title">우리의 신발을 사세요!</h4>
+            <h4 class="main-title">우리의 신발을 사세요! 엘제이신발 총알배송 신발 알죠? 여러분</h4>
             <p>이쁜 신발을 저렴한 가격에 구매해보세요</p>
             <button class="main-btn">구매하기</button>
         </div>
@@ -28,9 +44,45 @@
             신발을 빠르게 배송해드리고 있습니다</p>
         </div>
 
-    <!-- value 는 시작했을때 기본적으로 적혀있는 값 -->
+            <!--반응형 테스트 만들기-->
+            <div id="media-test">
+                <div>
+                    <p>빠른 쇼핑</p>
+                    <p>무엇이 있나요</p>
+                </div>
+                <div>
+                    <p>좋은 서비스</p>
+                    <p>무엇이 있나요</p>
+                </div>
+                <div>
+                    <p>무료 배송</p>
+                    <p>무엇이 있나요</p>
+                </div>
+                <div>
+                    <p>가입하세요</p>
+                    <p>무엇이 있나요</p>
+                </div>
+            </div>
 
-        
+            <div id="shop-bg">
+                <div class="shop-container">
+                    <div class="shop-item">
+                        <div style="position: relative;">
+                            <div class="overlay-warp">
+                            <div class="overlay"></div>
+                            </div>
+                            <img src="./img/product1-1.jpg">
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <img src="./img/product2.jpg">
+                    </div>
+                    <div class="shop-item">
+                        <img src="./img/product3.jpg">
+                    </div>
+                </div>
+            </div>
+
         <div class="input-contact">
             <h1>contact us</h1>
 
