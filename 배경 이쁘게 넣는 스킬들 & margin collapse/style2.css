@@ -2,6 +2,19 @@
 *{
     margin: 0; padding: 0; box-sizing: border-box;
 }
+@font-face{
+    font-family: "font-nanum";
+    src:url(경로)
+}
+/* nav */
+
+#navbar{
+    display: flex; background: rgb(203, 100, 100); color:#ffff;
+    height: 70px; align-items: center; padding: 10px;
+}
+#navbar div{
+    margin-right: 10px;
+}
 
 
 /* 백그라운드 이미지 */
@@ -25,6 +38,27 @@
 .sub-p{
     border:2px solid black; background: #d9d9d9; text-align: center;
     position: relative; top:-60px; width: 60%; margin: 0 auto; max-width: 700px;
+}
+
+/* 신발 이미지 */
+#shop-bg{
+    background: #eee; padding: 20px;
+}
+.shop-container{
+    display: flex; width: 90%; margin: 0 auto;
+}
+.shop-item{
+    width: 33.3%; padding: 15px;
+}
+.shop-item img{
+    width: 100%;
+}
+.overlay{
+    position: absolute; background: black;
+    opacity: 0; transition: 1s; width: 100%; height: 100%;
+}
+.overlay:hover{
+    opacity: 0.5; 
 }
 
 /* input란 */
@@ -52,4 +86,36 @@
 /* 바텀 공간 여백 만들기 */
 .more-padding{
     height: 500px;
+}
+
+/* 반응형 연습해보기 */
+#media-test{
+    display: flex; padding: 10px; text-align: center; justify-content: center;
+ 
+}
+#media-test p:nth-child(1){
+    color:brown
+}
+#media-test p{
+    margin: 10px 20px; 
+}
+
+/* 테블릿 */
+@media screen and (max-width:1200px){
+    #media-test{
+        flex-wrap: wrap;
+        color:red;
+    }
+    #media-test div{
+        width: 50%;
+        border: 1px solid black;
+    }
+}
+
+/* 모바일 */
+@media screen and (max-width:700px){
+    #media-test{
+        color:blue; flex-direction: column; justify-content: center; text-align: center;
+        align-items: center;
+    }
 }
