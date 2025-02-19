@@ -1,0 +1,85 @@
+/* 공통 부분 */
+*{
+    box-sizing: border-box; margin: 0; padding:0;
+}
+button{
+    border: none; background: rgb(65, 65, 65); border-radius: 5px; font-size: 20px; padding: 10px; cursor: pointer;
+    color:#ffff;
+}
+
+/* 탑 부분 */
+#top{
+    background: linear-gradient(to bottom,rgb(188, 207, 250),rgb(43, 152, 196)); width: 100%; height: 500px;
+}
+
+.top-text{
+    padding: 40px; 
+}
+
+.top-text h3 , .top-text p, .top-text button{
+    margin-top:15px; color:#ffff;
+}
+
+.top-text p{
+    font-size: 15px;
+}
+
+.top-img img{
+    width: 400px; margin: -175px 0 0 60%;
+}
+
+/* 탑 아래 글자 부분 */
+.text-page{
+    text-align: center; margin-top: 15px; width: 100%; height: 200px;
+}
+.text-page h4 , .text-page p, .text-page button{
+    margin-top: 15px;
+}
+
+/* 센터 */
+#center{
+    width: 100%; height:350px ; background-color:rgb(43, 152, 196); color:white; padding: 0.1px;
+}
+.center-head p{
+   text-align: center; 
+}
+.center-head p:nth-of-type(1){font-size: 14px;  margin-top: 20px;}
+
+#center img{width: 80px; height: 80px; border-radius: 50%; }
+
+.center-img-wrap{
+    display: flex; text-align: center; justify-content: center; margin-top: 70px;
+}
+.center-img-wrap div{margin-left: 10%}
+.center-img-wrap p:nth-of-type(2){font-size: 13px;}
+
+
+/* 바텀 */
+#botto-bg{
+    background-color: #ffff; width: 100%; height: 500px;
+}
+.bottom-head{
+    margin: 20px 0; text-align: center;
+}
+.bottom-head p:nth-of-type(1){
+    font-size: 14px;
+}
+
+.bm-img-wrap{
+    width: 80%; height: 85%; margin: 0 auto;
+}
+
+.bm-img-wrap img{
+    width: 50%; height: 50%; float: left;
+}
+
+.bottom-sns{
+    text-align: center;
+}
+
+.bottom-sns img{
+    width: 50px; height: 50px; margin:20px 20px; border-radius: 50%;
+}
+
+
+
