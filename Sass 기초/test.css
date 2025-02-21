@@ -1,0 +1,68 @@
+.btn-black, .btn-red, .btn-green {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+}
+
+.btn-green {
+  color: green;
+}
+
+.btn-red {
+  color: red;
+}
+
+.btn-black {
+  color: black;
+}
+
+.main-bg h4 {
+  font-size: 16px;
+}
+
+.main-bg button {
+  color: #d9d9d9;
+}
+
+.main-bg {
+  width: 100%;
+}
+.main-bg h4 {
+  font-size: 16px;
+}
+
+.main-bg button button {
+  color: #d9d9d9;
+}
+
+.background {
+  background: #dd0ddd;
+  font-size: 16px -2px;
+}
+
+.box {
+  color: #dd0ddd;
+}
+
+.boxbox {
+  color: #d9d9d9;
+  font-size: 18px;
+}
+
+.box3, .box2, .box1 {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+}
+
+.box1 {
+  background: yellow;
+}
+
+.box2 {
+  background: green;
+}
+
+.box3 {
+  background: orange;
+}/*# sourceMappingURL=test.css.map */

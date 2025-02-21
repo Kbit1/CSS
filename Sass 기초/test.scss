@@ -1,0 +1,71 @@
+$main-color:#dd0ddd;
+$sub-color:#d9d9d9;
+$normal-size:16px;
+
+//@extend 활용방법 여러개가 중복되었을때//
+%btn{
+    width: 100px; height: 100px; padding: 20px;
+}
+.btn-green{
+    @extend %btn;
+    color:green;
+}
+.btn-red{
+    @extend %btn;
+    color:red;
+}
+.btn-black{
+    @extend %btn;
+    color:black;
+}
+//@extend 활용방법 여러개가 중복되었을때//
+
+
+// nesting 활용법//
+.main-bg h4{
+    font-size: $normal-size;
+}
+.main-bg button{
+    color:$sub-color;
+}
+.main-bg{
+    width: 100%;
+    h4{font-size: $normal-size;}
+}
+.main-bg button{
+    button{color:$sub-color;}
+}
+// nesting 활용법//
+
+.background{
+    background:$main-color;
+    font-size: $normal-size -2px;
+}
+
+.box{
+    color:$main-color;
+}
+
+.boxbox{
+    color:$sub-color;
+    font-size: $normal-size +2px;
+}
+
+
+// @extend 를 활용하여 여러가지 만들어보기 //
+%box{
+    width:200px; height: 200px; padding: 20px;
+}
+
+.box1{
+    @extend %box;
+    background: yellow;
+}
+.box2{
+    @extend %box;
+    background: green;
+}
+.box3{
+    @extend %box;
+    background: orange;
+}
